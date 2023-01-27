@@ -1,0 +1,359 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수미가양곱창</title>
+  <link rel="stylesheet" href="../식당/css/all.min.css">
+  <link rel="stylesheet" href="../식당/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../식당/css/templatemo-style.css">
+
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=dgqid4621f"></script>
+
+  <style>
+    @font-face {
+      font-family: 'Humanbumsuk';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+
+    nav {
+      background-color: white;
+    }
+
+    body {
+      background-color: #fbf9ed;
+      font-family: 'Humanbumsuk';
+    }
+
+    pNnVF {
+      width: 54px
+    }
+
+    ;
+  </style>
+
+
+
+
+</head>
+
+<body>
+  <div id="wrap">
+
+    <header>
+      <div id="in_header" style="background-color: white;">
+        <a href="../index.html">
+          <img class="logo" src="../웹개발/로고.png" style="display: block; margin: 0 auto;" width="100px" height="90px">
+        </a>
+
+    </header>
+  </div>
+
+
+  <div class="container-fluid tm-container-content tm-mt-60">
+    <div class="row mb-4">
+      <h2 class="col-12 tm-text-primary">수미가양곱창</h2>
+    </div>
+    <div class="row tm-mb-90">
+      <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
+        <img src="../식당/img/sumi/[크기변환]수미 1.jpg" width="350px" height="350px">
+        <img src="../식당/img/sumi/[크기변환]수미 2.jpg" width="350px" height="350px">
+        <img src="../식당/img/sumi/[크기변환]수미 3.jpeg" width=350px height="350px">
+        <img src="../식당/img/sumi/[크기변환]수미 4.jpg" width=350px height="350px">
+        <img src="../식당/img/sumi/[크기변환]수미 5.jpg" width=350px height="350px">
+        <img src="../식당/img/sumi/[크기변환]수미 6.jpg" width=350px height="350px">
+        <img src="../식당/img/sumi/[크기변환]수미 7.jpg" width=350px height="350px">
+        <img src="../식당/img/sumi/[크기변환]수미 8.jpg" width=350px height="350px">
+        <img src="../식당/img/sumi/[크기변환]수미 9.jpg" width=350px height="350px">
+
+      </div>
+      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+        <div id="map" style="width:100%;height:400px;"></div>
+
+        <script>
+          var HOME_PATH = window.HOME_PATH || '.';
+
+          var cityhall = new naver.maps.LatLng(35.0901229, 129.0397154),
+            map = new naver.maps.Map('map', {
+              center: cityhall.destinationPoint(10, 10),
+              zoom: 18
+            }),
+            marker = new naver.maps.Marker({
+              map: map,
+              position: cityhall
+            });
+
+          var contentString = [
+            '<div class="iw_inner">',
+            '   <h3>수미가양곱창</h3>',
+            '   <p>부산 영도구 남항로25번길 19',
+            '   </p>',
+            '</div>'
+          ].join('');
+
+          var infowindow = new naver.maps.InfoWindow({
+            content: contentString
+          });
+
+          naver.maps.Event.addListener(marker, "click", function (e) {
+            if (infowindow.getMap()) {
+              infowindow.close();
+            } else {
+              infowindow.open(map, marker);
+            }
+          });
+
+          infowindow.open(map, marker);
+        </script>
+        <div class="tm-bg-gray tm-video-details">
+          <section class="restaurant-detail">
+            <header>
+              <div class="restaurant_title_wrap">
+                <span class="title">
+
+                  <p class="branch"></p>
+                </span>
+
+              </div>
+
+            </header>
+
+
+            <table class="info" border="1">
+              <tbody>
+                <tr class="only-desktop">
+                  <th>주소</th>
+                  <td>부산 영도구 남항로25번길 19 1층 </td>
+                </tr>
+                <tr class="only-desktop">
+                  <th>전화번호</th>
+                  <td>010-7763-6412</td>
+                </tr>
+                <tr>
+                  <th>음식 종류</th>
+                  <td>
+                    <span>양곱창</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>가격대</th>
+                  <td>4만원대~ 6만원대</td>
+                </tr>
+                <tr>
+                  <th>주차</th>
+                  <td>주차공간없음 </td>
+                </tr>
+                <tr>
+                  <th style="vertical-align:top;">영업시간</th>
+                  <td>15:00 ~ 24:00)</td>
+                </tr>
+                <tr>
+                  <th>휴일</th>
+                  <td>1,3,5번째 일요일</td>
+                </tr>
+                <tr>
+                  <th>메뉴</th>
+                  <td class="menu_td">
+                    <ul class="Restaurant_MenuList">
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">양곱창모듬구이 大</span>
+                        <span class="Restaurant_MenuPrice">65,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">양곱창모듬구이 小</span>
+                        <span class="Restaurant_MenuPrice">40,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">특양구이</span>
+                        <span class="Restaurant_MenuPrice">40,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">양곱창전골</span>
+                        <span class="Restaurant_MenuPrice">40,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">새우구이(15미)</span>
+                        <span class="Restaurant_MenuPrice">30,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">오겹살500g</span>
+                        <span class="Restaurant_MenuPrice">30,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">양곱창 볶음밥(돌솥)2인분</span>
+                        <span class="Restaurant_MenuPrice">10,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">볶음밥(전골드신 후)</span>
+                        <span class="Restaurant_MenuPrice">5,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">된장찌개(2인)</span>
+                        <span class="Restaurant_MenuPrice">2,000원</span>
+                      </li>
+
+
+
+
+
+                    </ul>
+                  </td>
+                  <br />
+                </tr>
+                </th>
+                </tr>
+
+              </tbody>
+            </table>
+
+
+
+          </section>
+          <div>
+            <br />
+            <br />
+            <div class="place_section" data-nclicks-area-code="rrr">
+              <h2 class="place_section_header no_line">방문자 리뷰<em class="place_section_count">59</em>
+              </h2>
+              <div class="place_section_content">
+                <div class="iqjjt">
+                  <ul class="uNsI9">
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 78.5714%;"></div>
+                      <div class="CsBE9">
+                        <img src="https://ssl.pstatic.net/static/pup/emoji/face_savoring_food20220119222022.png"
+                          class="Oj28t" alt="" width="22" height="22">
+                        <span class="nWiXa">"음식이 맛있어요"</span><span class="TwM9q">
+                          <span class="place_blind">이 키워드를 선택한 인원</span>22
+                        </span>
+                      </div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 21.4286%;">
+                      </div>
+                      <div class="CsBE9">
+                        <img src="https://ssl.pstatic.net/static/pup/emoji/beating_heart20220119222223.png"
+                          class="Oj28t" alt="" width="22" height="22"><span class="nWiXa">"친절해요"</span><span
+                          class="TwM9q"><span class="place_blind">이 키워드를 선택한 인원</span>6</span>
+                      </div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 10.7143%;"></div>
+                      <div class="CsBE9"><img src="https://ssl.pstatic.net/static/pup/emoji/leaf20220119222023.png"
+                          class="Oj28t" alt="" width="22" height="22"><span class="nWiXa">"재료가 신선해요"</span><span
+                          class="TwM9q"><span class="place_blind">이 키워드를 선택한 인원</span>3</span></div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 10.7143%;"></div>
+                      <div class="CsBE9"><img
+                          src="https://ssl.pstatic.net/static/pup/emoji/steamed_rice20220119222024.png" class="Oj28t"
+                          alt="" width="22" height="22"><span class="nWiXa">"양이 많아요"</span><span class="TwM9q"><span
+                            class="place_blind">이 키워드를 선택한 인원</span>3</span></div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 10.7143%;"></div>
+                      <div class="CsBE9"><img
+                          src="https://ssl.pstatic.net/static/pup/emoji/busts_in_silhouette20220119222027.png"
+                          class="Oj28t" alt="" width="22" height="22"><span class="nWiXa">"단체모임 하기 좋아요"</span><span
+                          class="TwM9q"><span class="place_blind">이 키워드를 선택한 인원</span>3
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                  </a>
+                </div>
+                <div class="TraH1">
+                  <ul class="Uf1BQ">
+                    <li class="qrzj_">
+                      <div class="IEbo1">
+                        <div class="GP2eR">
+                          <div class="RGkHL">
+                            <span class="zPfVt">전 곱창 좋아하는 편은 아니지만 여긴 좋읍니다.</span>
+                            </a>
+                          </div>
+                          <div class="ozEbl">
+                            <div class="place_thumb">
+                              <img
+                                src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f48_48&amp;src=https%3A%2F%2Fphinf.pstatic.net%2Fcontact%2F20210817_7%2F16292054367084xkuk_JPEG%2Fimage.jpg"
+                                class="YMYlP" alt="프로필" width="28" height="28">
+                            </div>
+                            </a>
+                            <div class="rg88i">귀능</div>
+                            <div class="FrWK3">
+                              <span class="ExHfk">
+                                <span class="place_blind">최근 방문일</span>
+                                <time aria-hidden="true">9.14.수</time>
+                                <span class="place_blind">2022년 9월 14일 수요일</span>
+                              </span>
+                              <span class="ExHfk">1번째 방문</span>
+                              <span class="ExHfk">영수증</span>
+                            </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="x0W33">
+                          <img
+                            src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f87_87&amp;src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA5MTVfNjYg%2FMDAxNjYzMjAxMTA5NzIy.d6u2YdsucPrIj-1OLOyJrYJOJPEJvixMubpdqbkZnQwg.QqM05DOVMaF7P5kVWGuSdtNaUPthebrlWDnb4YbIdhog.JPEG%2F20220914_193140.jpg"
+                            class="_img" alt="방문자리뷰">
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="qrzj_">
+                      <div class="IEbo1">
+                        <div class="GP2eR">
+                          <div class="RGkHL">
+                            <span class="zPfVt">좋아요 </span></a>
+                          </div>
+                          <div class="ozEbl">
+                            <div class="place_thumb"><img
+                                src="https://pcmap.place.naver.com/assets/shared/images/icon_default_profile.png"
+                                class="YMYlP" alt="프로필" width="28" height="28"></div>
+                            <div class="rg88i">ytg****</div>
+                            <div class="FrWK3">
+                              <span class="ExHfk">
+                                <span class="place_blind">최근 방문일</span>
+                                <time aria-hidden="true">10.14.금</time>
+                                <span class="place_blind">2022년 10월 14일 금요일</span>
+                              </span>
+                              <span class="ExHfk">1번째 방문</span>
+                              <span class="ExHfk">영수증</span>
+                            </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="lfH3O"><span class="iNSaH">방문자 리뷰</span>더보기</a></div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>

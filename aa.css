@@ -1,0 +1,28 @@
+.search-input {
+    width: all;
+    height: 40px;
+    font-size: 18px;
+    padding-left: 18px;
+    border: none;
+    border-radius: 20px;
+}
+.search-input:focus ~ .search-history {
+    display: block;
+}
+.search-input:focus {
+    outline: none;
+}
+
+.main-div {
+    width: 500px;
+    height: 40px;
+    padding: 10px;
+    align-items: center;
+    margin: 35px auto;
+}
+.search-form {
+    border: 2px solid black;
+    border-radius: 24px;
+    position: relative;
+    text-align: center;
+}

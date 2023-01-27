@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부산 맛집 소개 페이지</title>
+    
+    <style>
+
+        @font-face {
+            font-family: 'Humanbumsuk';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body{
+            background-color: #fbf9ed;
+        }
+        p{
+            font-family: 'Humanbumsuk';
+            font-size: 30px;
+        }
+    </style>
+    
+
+    <link rel="stylesheet" a href="reset.css"/>
+    <link rel="stylesheet" a href="pc.css"/>
+
+    
+
+    <script>
+        var index = 0;   //처음 이미지의 인덱스를 0으로 지정
+
+        window.onload = function(){  //웹 브라우저가 모든 요소를 준비했을 때 show()함수 호출
+            show();
+         }
+        
+
+        function show() {
+            var side = document.getElementsByClassName("s1");  //변수 side의 클래스 이름 s1 -> 화면 슬라이드
+            var dots = document.getElementsByClassName("dot");  //변수 dots의 클래스 이름 dot -> 슬라이드 화면이 몇번째인지 도트로 확인 
+
+            
+            for (var i = 0; i < side.length; i++) {
+            side[i].style.display = "none";   //처음에 전부 display를 none으로 한다.
+            }
+
+            index++; //인덱스를 +1
+
+            if (index > 3) {
+                index = 1;  //인덱스가 초과되면 1로 변경
+            }   
+
+            for (var i = 0; i < dots.length; i++) {  //화면이 넘어갈때마다 도트도 같이 넘어가게 
+            dots[i].className = dots[i].className.replace(" active", "");  //해당 화면일 때 클래스 이름을 dot->active로 변경
+            }
+
+            side[index-1].style.display = "block";  //해당 인덱스는 block으로
+            dots[index-1].className += " active";  //해당 도트를 active로
+
+            setTimeout(show, 3000);   //함수를 3초마다 호출
+     
+        }
+    </script>
+    <script type="text/javascript">
+        function filter(){
+  
+          var value, name, item, i;
+          var name1 = new Array("치히로식당", "고관해물탕","송원감자탕", "갓포사카나", "쟈니스시" );
+
+          value = document.getElementById("value").value.toUpperCase();
+          item = document.getElementsByClassName("item");
+  
+          for(i=0;i<item.length;i++){
+            name = item[i].getElementsByClassName("name");
+            name1[i] = item[i].getElementsByClassName("name1");
+
+            if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+              item[i].style.display = "flex";
+            }else{
+              item[i].style.display = "none";
+            }
+            
+          }
+        }
+  </script>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <header>
+            <div id="in_header">
+                <img class="logo" src="웹개발/로고.png" style="display: block; margin: 0 auto;">
+            </div>
+            
+        </header>
+
+
+        <div class="main">
+            <a href= "../project/1kacheu.html">
+                <img class="s1" src="웹개발/배너1.jpg" style="display: none;" width="100%" height="900px">
+            </a>
+            <a href="../project/1nagdon.html">
+                <img class="s1" src="웹개발/배너2.jpg" style="display: none;" width="100%" height="900px">
+            </a>
+            <a href="../project/1gohyang.html">
+                <img class="s1" src="웹개발/배너3.jpg" style="display: none;"width="100%" height="900px">
+            </a>
+
+            <span class="dot" style="margin-left: 950px; margin-top: 10px;"></span>
+    
+            <span class="dot"></span> 
+    
+            <span class="dot"></span> 
+  
+        </div>
+
+           
+            
+        
+        
+
+        <div class="main22">
+            <a href="../project/2sub.html">
+                <p style="text-align:center; margin-top:20px; font-size: 50px; background-color: #f6f9d6;">BEST 식당</p>
+            </a>
+                
+        </div>
+        
+        <div class="searchbox">
+            <input onkeyup="filter()" type="text" id="value" style="color:black; width: 300px; height: 35px; display: block; margin: 0 auto;">
+            <div class="container" style="width: 400px; height: 250px; display: block; margin: 0 auto;" >
+                
+                <div class="item" style="width: 300px; height: 40px;">
+                    <a href="../project/1tteogjang.html">
+                        <p><span class="name">1. 떡장인방앗간</span></p>
+                    </a>
+                  
+                </div>
+        
+                <div class="item">
+                  <a href="../project/식당/1chihilo.html">
+                    <p><span class="name">2. 치히로식당</span></p>
+                  </a>
+                </div>
+        
+                <div class="item">
+                    
+                  <a href="../project/식당/1igane.html">
+                    <p><span class="name">3. 이가네떡볶이</span></p>
+                    
+                  </a>
+                </div>
+        
+                <div class="item">
+                    <a href="../project/식당/1cholyang jeil.html">
+                        <p><span class="name">4. 초량제일류식당</span></p>
+                    </a>
+                </div>
+        
+                <div class="item">
+                  <a href="../project/식당/1pohang.html">
+                    <p><span class="name">5. 포항집</span></p>
+                  </a>
+                </div>
+        
+        </div>
+
+        
+
+        <section id="section_1">
+            <div class="inner">
+                <ul id="type">
+                    <li>
+                        <a href="http://1.253.254.68/deu20191196/%EC%B4%88%EB%B0%A5.html"><img src="웹개발/sushi.png"><p>초밥</p></a>
+                    </li>
+                    <li>
+                        <a href="http://1.253.254.68/deu20191196/%EB%96%A1%EB%B3%B6%EC%9D%B4.html"><img src="웹개발/tteokbokki.png"><p>떡볶이</p></a>
+                    </li>
+                    <li>
+                        <a href="http://1.253.254.68/deu20191196/%EB%B0%B1%EB%B0%98.html"><img src="웹개발/free-icon-bibimbap-2509480.png"><p>백반</p></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="웹개발/pasta.png"><p>파스타</p></a>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><img src="웹개발/tonkatsu.png"><p>돈까스</p></a>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><img src="웹개발/free-icon-jjambbong-8330296.png"><p>마라탕</p></a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </section>
+
+
+        <section id="section_2">
+            <div class="inner">
+                <div class="title">
+                    <p>#여기가 찐이야! 로컬맛집</p>
+                </div>
+                <ul class="cont">
+                    <li>
+                        <a href="../project/식당/1tteogjang.html">
+                            <img src="웹개발/떡장인방앗간.jpg"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../project/식당/1eolkeun.html">
+                            <img src="웹개발/얼큰이칼국수.jpg"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../project/식당/1pohang.html">
+                            <img src="웹개발/포항집.png"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../project/식당/1igane.html">
+                            <img src="웹개발/이가네떡볶이.png"/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="section_3">
+            <div class="inner">
+                <div class="title">
+                    <p>#인생샷 각 분위기맛집</p>
+                </div>
+                <ul class="cont">
+                    <li>
+                        <a href="../project/식당/1chihilo.html">
+                            <img src="웹개발/치히로식당3.jpg"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../project/식당/1koka.html">
+                            <img src="웹개발/코카모메.png"/>
+                        </a>
+                    </li>
+                    <li><img src="웹개발/동백아가씨.png"/></li>
+                    <li><img src="웹개발/원화랑.jpg"/></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="section_4">
+            <div class="inner">
+                <div class="title">
+                    <p>#가족과 함께 먹어요</p>
+                </div>
+                <ul class="cont">
+                    <li>
+                        <a href="../project/식당/1songwon.html">
+                            <img src="웹개발/송원감자탕.png"/>
+                        </a></li>
+                    <li><img src="웹개발/수미가양곱창.jpg"/></li>
+                    <li><img src="웹개발/해운대암소갈비.jpg"/></li>
+                    <li><img src="웹개발/해물탕.jpg"/></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="section_5">
+            <div class="inner">
+                <div class="title">
+                    <p>#뒷풀이는 여기</p>
+                </div>
+                <ul class="cont">
+                    <li>
+                        <a href="../project/식당/1dolsoe.html">
+                            <img src="웹개발/돌쇠장작구이.png"/>
+                        </a>
+                    </li>
+                    <li><img src="웹개발/조선칼국수.png"/> </li>
+                    <li><img src="웹개발/기승전골.jpg"/> </li>
+                    <li><img src="웹개발/길세이로무시.jpg"/> </li>
+                </ul>
+            </div>
+        </section>
+
+
+    </div>
+    
+</body>
+</html>

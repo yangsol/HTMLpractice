@@ -1,0 +1,288 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>치히로식당</title>
+    <link rel="stylesheet" href="../식당/css/all.min.css">
+    <link rel="stylesheet" href="../식당/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../식당/css/templatemo-style.css">
+
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=dgqid4621f"></script>
+    
+    <style>
+            @font-face {
+            font-family: 'Humanbumsuk';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        nav {
+        background-color: white;
+    }
+        body{
+            background-color: #fbf9ed;
+            font-family: 'Humanbumsuk';
+        }
+        pNnVF{width: 54px} ;
+
+        footer>.inner{
+    
+    max-width: 1920px;
+}
+
+footer p{
+    font-size: 15px;
+    color: #555;
+    margin: 0 30px 12px 0;
+}
+
+footer ul{
+    display: flex;
+}
+      
+    </style>
+    
+
+</head>
+  <body>
+    <div id="wrap">
+
+      <header>
+          <div id="in_header" style="background-color: white;" >
+              <a href="http://1.253.254.68/deu20183349/project/#" >   
+              <img class="logo" src="../deu20183349/project/웹개발/로고.png" style="display: block; margin: 0 auto;" width="100px" height="90px">
+              </a>
+  
+      </header>             
+          </div>
+
+
+    <div class="container-fluid tm-container-content tm-mt-60">
+        <div class="row mb-4">
+            <h2 class="col-12 tm-text-primary">치히로식당</h2>
+        </div>
+        <div class="row tm-mb-90">            
+            <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
+                <img src="../식당/img/chihilo/치히로식당1.jpg"   width= 350px height="350px">
+                <img src="../식당/img/chihilo/치히로식당2.jpg"   width= 350px height="350px">
+                <img src="../식당/img/chihilo/치히로식당3.jpg"   width= 350px height="350px">
+                <img src="../식당/img/chihilo/치히로식당4.jpg"   width= 350px height="350px">
+                <img src="../식당/img/chihilo/치히로식당5.jpg"   width= 350px height="350px">
+                <img src="../식당/img/chihilo/치히로식당6.jpg"   width= 350px height="350px">
+                <img src="../식당/img/chihilo/치히로식당7.jpg"   width= 350px height="350px">
+                <img src="../식당/img/chihilo/치히로식당8.jpg"   width= 350px height="350px">
+                <img src="../식당/img/chihilo/치히로식당9.jpg"   width= 350px height="350px">
+                
+            </div>
+            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+                <div id="map" style="width:100%;height:400px;"></div>
+
+                <script>
+                    var HOME_PATH = window.HOME_PATH || '.';
+
+var cityhall = new naver.maps.LatLng(35.1587637, 129.0645493),
+    map = new naver.maps.Map('map', {
+        center: cityhall.destinationPoint(10, 10),
+        zoom: 18
+    }),
+    marker = new naver.maps.Marker({
+        map: map,
+        position: cityhall
+    });
+
+var contentString = [
+        '<div class="iw_inner">',
+        '   <h3>치히로식당</h3>',
+        '   <p>부산 부산진구 서전로47번길 19 1층 ',
+        '   </p>',
+        '</div>'
+    ].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString
+});
+
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+
+infowindow.open(map, marker);
+                </script>
+                <div class="tm-bg-gray tm-video-details">
+                    <section class="restaurant-detail">
+                        <header>
+                          <div class="restaurant_title_wrap">
+                            <span class="title">
+            
+                              <p class="branch"></p>
+                            </span>
+            
+                          </div>
+
+                        </header>
+            
+            
+                        <table class="info" border="1">
+                          <tbody>
+                            <tr class="only-desktop">
+                              <th>주소</th>
+                              <td>부산 부산진구 서전로47번길 19 1층 치히로식당 </td>
+                            </tr>
+                            <tr class="only-desktop">
+                              <th>전화번호</th>
+                              <td>0507-1344-1409</td>
+                            </tr>
+                            <tr>
+                              <th>음식 종류</th>
+                              <td>
+                                <span>일식당</span>
+                              </td>
+                            </tr>            
+                            <tr>
+                              <th>가격대</th>
+                              <td>1만원대 - 4만원대</td>
+                            </tr>            
+                            <tr>
+                              <th>주차</th>
+                              <td>주차공간없음 </td>
+                            </tr>           
+                            <tr>
+                              <th style="vertical-align:top;">영업시간</th>
+                              <td>11:30 ~ 20:30(브레이크타임 15:00~17:00, 일요일 15:00 라스트오더)</td>
+                            </tr>           
+                            <tr>
+                              <th>휴일</th>
+                              <td>매주 월요일</td>
+                            </tr>           
+                            <tr>
+                              <th>메뉴</th>
+                              <td class="menu_td">
+                                <ul class="Restaurant_MenuList">
+                                    <li class="Restaurant_MenuItem">
+                                      <span class="Restaurant_Menu">치히로2인세트</span>
+                                        <span class="Restaurant_MenuPrice">35,800원</span>
+                                    </li>
+                                    <li class="Restaurant_MenuItem">
+                                        <span class="Restaurant_Menu">치히로정식</span>
+                                          <span class="Restaurant_MenuPrice">16,900원</span>
+                                      </li>
+                                    <li class="Restaurant_MenuItem">
+                                      <span class="Restaurant_Menu">반반정식</span>
+                                        <span class="Restaurant_MenuPrice">18,500</span>
+                                    </li>
+                                    <li class="Restaurant_MenuItem">
+                                        <span class="Restaurant_Menu">특치히로정식</span>
+                                            <span class="Restaurant_MenuPrice">21,900원</span>
+                                    </li>
+                                    <li class="Restaurant_MenuItem">
+                                      <span class="Restaurant_Menu">연어정식</span>
+                                        <span class="Restaurant_MenuPrice">20,500원</span>
+                                    </li>
+                                    <li class="Restaurant_MenuItem">
+                                        <span class="Restaurant_Menu">장어정식</span>
+                                          <span class="Restaurant_MenuPrice">20,500원</span>
+                                      </li>
+                                      <li class="Restaurant_MenuItem">
+                                        <span class="Restaurant_Menu">메론하이볼</span>
+                                          <span class="Restaurant_MenuPrice">8,000원</span>
+                                      </li>
+                                      <li class="Restaurant_MenuItem">
+                                        <span class="Restaurant_Menu">왕구슬 산토리하이볼</span>
+                                          <span class="Restaurant_MenuPrice">7,000원</span>
+                                      </li>
+                                      
+
+                                     
+                                </ul>
+                              </td>
+                              <br/>
+                            </tr>
+                              </th>
+                            </tr>
+                            
+                          </tbody>
+                        </table>
+
+
+
+                    </section>
+                        <div>
+                            <br/>
+                            <br/>
+                            <div class="iqjjt">
+                              <ul class="uNsI9">
+                                <li class="nbD78">
+                                  <div class="GFp6T" style="width: 80.9524%;"></div>
+                                  <div class="CsBE9">
+                                    <img src="https://ssl.pstatic.net/static/pup/emoji/face_savoring_food20220119222022.png" class="Oj28t" alt="" width="22" height="22">
+                                    <span class="nWiXa">"음식이 맛있어요"</span>
+                                    <span class="TwM9q"><span class="place_blind">이 키워드를 선택한 인원</span>306</span>
+                                  </div>
+                                </li>
+                                <li class="nbD78">
+                                  <div class="GFp6T" style="width: 40.2116%;"></div>
+                                  <div class="CsBE9">
+                                    <img src="https://ssl.pstatic.net/static/pup/emoji/beating_heart20220119222223.png" class="Oj28t" alt="" width="22" height="22">
+                                    <span class="nWiXa">"친절해요"</span>
+                                    <span class="TwM9q">
+                                      <span class="place_blind">이 키워드를 선택한 인원</span>152
+                                    </span>
+                                    </div>
+                                  </li>
+                                  <li class="nbD78">
+                                    <div class="GFp6T" style="width: 33.0688%;">
+                                    </div>
+                                    <div class="CsBE9">
+                                      <img src="https://ssl.pstatic.net/static/pup/emoji/leaf20220119222023.png" class="Oj28t" alt="" width="22" height="22"><span class="nWiXa">"재료가 신선해요"</span>
+                                      <span class="TwM9q">
+                                        <span class="place_blind">이 키워드를 선택한 인원</span>125
+                                      </span>
+                                    </div>
+                                  </li>
+                                  <li class="nbD78">
+                                    <div class="GFp6T" style="width: 28.3069%;">
+                                    </div>
+                                    <div class="CsBE9">
+                                      <img src="https://ssl.pstatic.net/static/pup/emoji/cook20220119222024.png" class="Oj28t" alt="" width="22" height="22">
+                                      <span class="nWiXa">"특별한 메뉴가 있어요"</span>
+                                      <span class="TwM9q">
+                                        <span class="place_blind">이 키워드를 선택한 인원</span>107
+                                      </span>
+                                    </div>
+                                  </li>
+                                  <li class="nbD78">
+                                    <div class="GFp6T" style="width: 17.1958%;">
+                                    </div>
+                                    <div class="CsBE9">
+                                      <img src="https://ssl.pstatic.net/static/pup/emoji/couch_and_lamp20220119222025.png" class="Oj28t" alt="" width="22" height="22"><span class="nWiXa">"인테리어가 멋져요"</span>
+                                      <span class="TwM9q">
+                                        <span class="place_blind">이 키워드를 선택한 인원</span>65
+                                      </span>
+                                    </div>
+                                  </li>
+                                </ul>
+                              
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+
+  
+
+
+            </div>
+
+
+
+            
+        </div>
+       
+
+</body></html>

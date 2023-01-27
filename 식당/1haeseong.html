@@ -1,0 +1,344 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>해성막창</title>
+  <link rel="stylesheet" href="../식당/css/all.min.css">
+  <link rel="stylesheet" href="../식당/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../식당/css/templatemo-style.css">
+
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=dgqid4621f"></script>
+
+  <style>
+    @font-face {
+      font-family: 'Humanbumsuk';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+
+    nav {
+      background-color: white;
+    }
+
+    body {
+      background-color: #fbf9ed;
+      font-family: 'Humanbumsuk';
+    }
+
+    pNnVF {
+      width: 54px
+    }
+
+    ;
+  </style>
+
+
+
+
+</head>
+
+<body>
+  <div id="wrap">
+
+    <header>
+      <div id="in_header" style="background-color: white;">
+        <a href="../index.html">
+          <img class="logo" src="../웹개발/로고.png" style="display: block; margin: 0 auto;" width="100px" height="90px">
+        </a>
+
+    </header>
+  </div>
+
+  <div class="container-fluid tm-container-content tm-mt-60">
+    <div class="row mb-4">
+      <h2 class="col-12 tm-text-primary">해성막창</h2>
+    </div>
+    <div class="row tm-mb-90">
+      <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
+        <img src="../식당/img/haeseong/해성 1.jpg" width="350px" height="350px">
+        <img src="../식당/img/haeseong/해성 2.jpg" width="350px" height="350px">
+        <img src="../식당/img/haeseong/해성 3.jpg" width=350px height="350px">
+        <img src="../식당/img/haeseong/해성 4.jpg" width=350px height="350px">
+        <img src="../식당/img/haeseong/해성 5.jpg" width=350px height="350px">
+        <img src="../식당/img/haeseong/해성 6.jpg" width=350px height="350px">
+        <img src="../식당/img/haeseong/해성 7.jpg" width=350px height="350px">
+        <img src="../식당/img/haeseong/해성 8.jpg" width=350px height="350px">
+        <img src="../식당/img/haeseong/해성 9.jpg" width=350px height="350px">
+
+      </div>
+      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+        <div id="map" style="width:100%;height:400px;"></div>
+
+        <script>
+          var HOME_PATH = window.HOME_PATH || '.';
+
+          var cityhall = new naver.maps.LatLng(35.1638952, 129.1632792),
+            map = new naver.maps.Map('map', {
+              center: cityhall.destinationPoint(10, 10),
+              zoom: 18
+            }),
+            marker = new naver.maps.Marker({
+              map: map,
+              position: cityhall
+            });
+
+          var contentString = [
+            '<div class="iw_inner">',
+            '   <h3>해성막창 본점</h3>',
+            '   <p>부산광역시 해운대구 중동1로19번길 29',
+            '   </p>',
+            '</div>'
+          ].join('');
+
+          var infowindow = new naver.maps.InfoWindow({
+            content: contentString
+          });
+
+          naver.maps.Event.addListener(marker, "click", function (e) {
+            if (infowindow.getMap()) {
+              infowindow.close();
+            } else {
+              infowindow.open(map, marker);
+            }
+          });
+
+          infowindow.open(map, marker);
+        </script>
+        <div class="tm-bg-gray tm-video-details">
+          <section class="restaurant-detail">
+            <header>
+              <div class="restaurant_title_wrap">
+                <span class="title">
+
+                  <p class="branch"></p>
+                </span>
+
+              </div>
+
+            </header>
+
+
+            <table class="info" border="1">
+              <tbody>
+                <tr class="only-desktop">
+                  <th>주소</th>
+                  <td>부산광역시 해운대구 중동1로19번길 29<br>
+                    <span class="Restaurant__InfoAddress--Rectangle">지번</span>
+                    <span class="Restaurant__InfoAddress--Text">부산시 해운대구 중동 1732</span>
+                  </td>
+                </tr>
+
+                <tr class="only-desktop">
+                  <th>전화번호</th>
+                  <td>051-731-3113</td>
+                </tr>
+
+                <tr>
+                  <th>음식 종류</th>
+                  <td>
+                    <span>고기 요리</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th>가격대</th>
+                  <td>만원대</td>
+                </tr>
+
+                <tr>
+                  <th>주차</th>
+                  <td>무료주차 가능 </td>
+                </tr>
+
+                <tr>
+                  <th style="vertical-align:top;">영업시간</th>
+                  <td>월-목: 16:00 - 24:00<br> 금-토: 16:00 - 01:00</td>
+                </tr>
+
+
+
+                <tr>
+                  <th>휴일</th>
+                  <td>일</td>
+                </tr>
+
+
+                <tr>
+                  <th>메뉴</th>
+                  <td class="menu_td">
+                    <ul class="Restaurant_MenuList">
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">소막창 180g</span>
+                        <span class="Restaurant_MenuPrice">12,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">대창구이 250g</span>
+                        <span class="Restaurant_MenuPrice">12,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">곱창전골 (1인)</span>
+                        <span class="Restaurant_MenuPrice">11,000원</span>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+
+
+
+          </section>
+          <div>
+            <br />
+            <br />
+            <div class="place_section" data-nclicks-area-code="rrr">
+              <h2 class="place_section_header no_line">방문자 리뷰<em class="place_section_count">1,978</em>
+              </h2>
+              <div class="place_section_content">
+                <div class="iqjjt">
+                  <ul class="uNsI9">
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 78.2864%;"></div>
+                      <div class="CsBE9"><img
+                          src="https://ssl.pstatic.net/static/pup/emoji/face_savoring_food20220119222022.png"
+                          class="Oj28t" alt="" width="22" height="22"><span class="nWiXa">"음식이 맛있어요"</span><span
+                          class="TwM9q"><span class="place_blind">이 키워드를 선택한 인원</span>667</span></div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 17.8404%;"></div>
+                      <div class="CsBE9"><img src="https://ssl.pstatic.net/static/pup/emoji/coin20220119222025.png"
+                          class="Oj28t" alt="" width="22" height="22"><span class="nWiXa">"가성비가 좋아요"</span><span
+                          class="TwM9q"><span class="place_blind">이 키워드를 선택한 인원</span>152</span></div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 14.0845%;"></div>
+                      <div class="CsBE9"><img
+                          src="https://ssl.pstatic.net/static/pup/emoji/beating_heart20220119222223.png" class="Oj28t"
+                          alt="" width="22" height="22"><span class="nWiXa">"친절해요"</span><span class="TwM9q"><span
+                            class="place_blind">이 키워드를 선택한 인원</span>120</span></div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 13.4977%;"></div>
+                      <div class="CsBE9"><img src="https://ssl.pstatic.net/static/pup/emoji/leaf20220119222023.png"
+                          class="Oj28t" alt="" width="22" height="22"><span class="nWiXa">"재료가 신선해요"</span><span
+                          class="TwM9q"><span class="place_blind">이 키워드를 선택한 인원</span>115</span></div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 13.1455%;"></div>
+                      <div class="CsBE9"><img src="https://ssl.pstatic.net/static/pup/emoji/cook20220119222024.png"
+                          class="Oj28t" alt="" width="22" height="22"><span class="nWiXa">"특별한 메뉴가 있어요"</span><span
+                          class="TwM9q"><span class="place_blind">이 키워드를 선택한 인원</span>112</span></div>
+                    </li>
+                  </ul></a>
+                </div>
+                <div class="TraH1">
+                  <ul class="Uf1BQ">
+                    <li class="qrzj_">
+                      <div class="IEbo1">
+                        <div class="GP2eR">
+                          <div class="RGkHL">
+                            <span class="zPfVt">소막창2인분에 대창1인분 주문했는데, 막창보다 대창이 더 맛있어서🤩 대창을 더 시킬껄 하고 후회했어요 다음에는 꼭 대창을 더
+                              많이 시...</span><span class="rvCSr"><span class="place_blind">내용 더보기</span></span></a>
+                          </div>
+                          <div class="ozEbl">
+                            <div class="place_thumb"><img
+                                src="https://pcmap.place.naver.com/assets/shared/images/icon_default_profile.png"
+                                class="YMYlP" alt="프로필" width="28" height="28"></div></a>
+                            <div class="rg88i">나빵너좋아하냐</div>
+                            <div class="FrWK3"><span class="ExHfk"><span class="place_blind">최근 방문일</span><time
+                                  aria-hidden="true">10.29.토</time><span class="place_blind">2022년 10월 29일
+                                  토요일</span></span><span class="ExHfk">1번째 방문</span><span class="ExHfk">영수증</span></div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="x0W33">
+                          <img
+                            src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f87_87&amp;src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjEyMDJfOTMg%2FMDAxNjY5OTY5OTcxNjUx.o2M_uSFxitkcyvl6Bdajz_YiHnP22N0qbblqy4m1sWwg.fSoyrQXPOghLVMcLDBw4TYIAbh3KjK4isU5_DtR8C_Mg.JPEG%2F20221029_172730.jpg"
+                            class="_img" alt="방문자리뷰"><span class="place_thumb_count"><span
+                              class="place_blind"></span></span></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="qrzj_">
+                      <div class="IEbo1">
+                        <div class="GP2eR">
+                          <div class="RGkHL">
+                            <span class="zPfVt">부산여행 오면 꼭 오는 곳ㅠㅠ 아직 여기만한 막창 대창 못 먹어봤어요 어찌나 맛있으면 둘이서 7인분
+                              조졌습니다…대창3,막창2,곱창전골2...</span><span class="rvCSr"><span class="place_blind">내용
+                                더보기</span></span></a>
+                          </div>
+                          <div class="ozEbl">
+                            <div class="place_thumb"><img
+                                src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f48_48&amp;src=https%3A%2F%2Fphinf.pstatic.net%2Fcontact%2F20211204_89%2F1638559917037ad0eR_PNG%2FprofileImage.png"
+                                class="YMYlP" alt="프로필" width="28" height="28"></div></a>
+                            <div class="rg88i">오얏ㅇㅇㅇ</div>
+                            <div class="FrWK3"><span class="ExHfk"><span class="place_blind">최근 방문일</span><time
+                                  aria-hidden="true">10.25.화</time><span class="place_blind">2022년 10월 25일
+                                  화요일</span></span><span class="ExHfk">1번째 방문</span><span class="ExHfk">영수증</span></div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="x0W33">
+                          <img
+                            src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f87_87&amp;src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjExMDRfNjIg%2FMDAxNjY3NDk2NzUwNjQ0.RqqFokfPA0Dqlxxabm6dH-FzN_Pdxj4hoYgNn-DtpY8g.xhBjdP8ZYiV-A0bZHMp6tcpwdTf_JlA81LLt0aT_B_gg.JPEG%2F76FC9FCF-FFF2-4C6B-A355-EB112FF5372B.jpeg"
+                            class="_img" alt="방문자리뷰"><span class="place_thumb_count"><span
+                              class="place_blind"></span></span></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="qrzj_">
+                      <div class="IEbo1">
+                        <div class="GP2eR">
+                          <div class="RGkHL">
+                            <span class="zPfVt">해운대 산책하다가 우연히 발견한 곳인데 이렇게 유명한 곳인지 몰랐어요. 가격도 저렴하고 양도 푸짐하고 맛도 있더라구요. 마늘향이
+                              은은하...</span><span class="rvCSr"><span class="place_blind">내용 더보기</span></span></a>
+                          </div>
+                          <div class="ozEbl">
+                            <div class="place_thumb"><img
+                                src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f48_48&amp;src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20221013_18%2F16655891977046HcSc_JPEG%2F6BF06E26-8270-4340-AF52-B83BC9141AF4.jpeg"
+                                class="YMYlP" alt="프로필" width="28" height="28"></div></a>
+                            <div class="rg88i">깐깐맛잘알</div>
+                            <div class="FrWK3"><span class="ExHfk"><span class="place_blind">최근 방문일</span><time
+                                  aria-hidden="true">10.10.월</time><span class="place_blind">2022년 10월 10일
+                                  월요일</span></span><span class="ExHfk">1번째 방문</span><span class="ExHfk">영수증</span></div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="x0W33">
+                          <img
+                            src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f87_87&amp;src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjEwMTJfMjUx%2FMDAxNjY1NTY0NjgzODc1.gw7H_67O3Uha4_eXmbKsVPrAqaW8pgi9lP54jIdVKZ0g.uVvYyA1xK5cwx5rJIeqtWpcbdQOFyeWVFoQbG3mYt0Ig.JPEG%2FB6B1AEC4-0467-4FD6-87BF-4B81050D268A.jpeg"
+                            class="_img" alt="방문자리뷰"><span class="place_thumb_count"><span
+                              class="place_blind"></span></span></a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="lfH3O">
+                  <span class="iNSaH">방문자 리뷰</span>더보기</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>

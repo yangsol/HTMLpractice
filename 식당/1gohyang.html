@@ -1,0 +1,383 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고향연화</title>
+  <link rel="stylesheet" href="../식당/css/all.min.css">
+  <link rel="stylesheet" href="../식당/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../식당/css/templatemo-style.css">
+
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=dgqid4621f"></script>
+
+  <style>
+    @font-face {
+      font-family: 'Humanbumsuk';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+
+    nav {
+      background-color: white;
+    }
+
+    body {
+      background-color: #fbf9ed;
+      font-family: 'Humanbumsuk';
+    }
+
+    pNnVF {
+      width: 54px
+    }
+
+    ;
+
+    footer {
+      background-color: white;
+      text-align: center;
+    }
+
+    footer>.inner {
+      margin: 60px auto;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 15px;
+      color: #555;
+      margin: 0 30px 12px 0;
+      text-align: center;
+    }
+
+    footer ul {
+      display: flex;
+      text-align: center;
+    }
+  </style>
+
+
+
+
+</head>
+
+<body>
+
+  <div id="wrap">
+
+    <header>
+      <div id="in_header" style="background-color: white;">
+        <a href="../index.html">
+          <img class="logo" src="../웹개발/로고.png" style="display: block; margin: 0 auto;" width="100px" height="90px">
+        </a>
+
+    </header>
+  </div>
+
+  <div class="container-fluid tm-container-content tm-mt-60">
+    <div class="row mb-4">
+      <h2 class="col-12 tm-text-primary">고향연화</h2>
+    </div>
+    <div class="row tm-mb-90">
+      <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
+        <img src="../식당/img/gohyang/고향 1.jpg" width="350px" height="350px">
+        <img src="../식당/img/gohyang/고향 2.jpg" width="350px" height="350px">
+        <img src="../식당/img/gohyang/고향 3.jpg" width=350px height="350px">
+        <img src="../식당/img/gohyang/고향 4.jpg" width=350px height="350px">
+        <img src="../식당/img/gohyang/고향 5.jpg" width=350px height="350px">
+        <img src="../식당/img/gohyang/고향 6.jpg" width=350px height="350px">
+        <img src="../식당/img/gohyang/고향 7.jpg" width=350px height="350px">
+        <img src="../식당/img/gohyang/고향 8.jpg" width=350px height="350px">
+        <img src="../식당/img/gohyang/고향 9.jpg" width=350px height="350px">
+
+      </div>
+      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+        <div id="map" style="width:100%;height:400px;"></div>
+
+        <script>
+          var HOME_PATH = window.HOME_PATH || '.';
+
+          var cityhall = new naver.maps.LatLng(35.2174623, 129.2248143),
+            map = new naver.maps.Map('map', {
+              center: cityhall.destinationPoint(10, 10),
+              zoom: 18
+            }),
+            marker = new naver.maps.Marker({
+              map: map,
+              position: cityhall
+            });
+
+          var contentString = [
+            '<div class="iw_inner">',
+            '   <h3>고향연화</h3>',
+            '   <p>부산 기장군 기장읍 연화길 33-8</p>',
+            '</div>'
+          ].join('');
+
+          var infowindow = new naver.maps.InfoWindow({
+            content: contentString
+          });
+
+          naver.maps.Event.addListener(marker, "click", function (e) {
+            if (infowindow.getMap()) {
+              infowindow.close();
+            } else {
+              infowindow.open(map, marker);
+            }
+          });
+
+          infowindow.open(map, marker);
+        </script>
+        <div class="tm-bg-gray tm-video-details">
+          <section class="restaurant-detail">
+            <header>
+              <div class="restaurant_title_wrap">
+                <span class="title">
+
+
+                  <p class="branch"></p>
+                </span>
+
+              </div>
+
+            </header>
+
+
+            <table class="info" border="1">
+              <tbody>
+                <tr class="only-desktop">
+                  <th>주소</th>
+                  <td>부산 기장군 기장읍 연화길 33-8 </td>
+                </tr>
+                <tr class="only-desktop">
+                  <th>전화번호</th>
+                  <td>051-724-9005</td>
+                </tr>
+                <tr>
+                  <th>음식 종류</th>
+                  <td>
+                    <span>분식</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>가격대</th>
+                  <td>만원대</td>
+                </tr>
+                <tr>
+                  <th>주차</th>
+                  <td>주차가능 </td>
+                </tr>
+                <tr>
+                  <th style="vertical-align:top;">영업시간</th>
+                  <td>11:30 ~ 20:00 (15:00 ~ 17:30 브레이크타임) </td>
+                </tr>
+
+                <tr>
+                  <th>메뉴</th>
+                  <td class="menu_td">
+                    <ul class="Restaurant_MenuList">
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">400시간숙성 모듬카츠</span>
+                        <span class="Restaurant_MenuPrice">15,500원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">전복듬뿍 전복리조또</span>
+                        <span class="Restaurant_MenuPrice">15,500원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">11가지재료 후토마키 한줄</span>
+                        <span class="Restaurant_MenuPrice">22,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">A세트(2인) (모듬카츠정식+전복리조또+탄산)</span>
+                        <span class="Restaurant_MenuPrice">35,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">B세트(2인)(모듬카츠정식+전복리조또+후토마키반줄+탄산)</span>
+                        <span class="Restaurant_MenuPrice">6,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">소세지 듬뿍 나폴리탄 </span>
+                        <span class="Restaurant_MenuPrice">14,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">생선카츠정식 </span>
+                        <span class="Restaurant_MenuPrice">14,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">에비동 </span>
+                        <span class="Restaurant_MenuPrice">15,500원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">카츠산도 </span>
+                        <span class="Restaurant_MenuPrice">12,000원</span>
+                      </li>
+
+
+                    </ul>
+                  </td>
+                </tr>
+                </th>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <div>
+
+            <br>
+            <br>
+            <div class="place_section" data-nclicks-area-code="rrr">
+              <h2 class="place_section_header no_line">방문자 리뷰<em class="place_section_count">1,946</em>
+              </h2>
+              <div class="place_section_content">
+                <div class="iqjjt">
+                  <ul class="uNsI9">
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 70.7893%;"></div>
+                      <div class="CsBE9"><img
+                          src="https://ssl.pstatic.net/static/pup/emoji/face_savoring_food20220119222022.png"
+                          class="Oj28t" alt="" width="22" height="22"><span class="nWiXa">"음식이 맛있어요"</span><span
+                          class="TwM9q"><span class="place_blind">이 키워드를 선택한 인원</span>870</span></div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 36.1269%;"></div>
+                      <div class="CsBE9"><img
+                          src="https://ssl.pstatic.net/static/pup/emoji/beating_heart20220119222223.png" class="Oj28t"
+                          alt="" width="22" height="22"><span class="nWiXa">"친절해요"</span><span class="TwM9q"><span
+                            class="place_blind">이 키워드를 선택한 인원</span>444</span></div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 22.7014%;"></div>
+                      <div class="CsBE9"><img src="https://ssl.pstatic.net/static/pup/emoji/cook20220119222024.png"
+                          class="Oj28t" alt="" width="22" height="22"><span class="nWiXa">"특별한 메뉴가 있어요"</span><span
+                          class="TwM9q"><span class="place_blind">이 키워드를 선택한 인원</span>279</span></div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 22.2132%;"></div>
+                      <div class="CsBE9"><img
+                          src="https://ssl.pstatic.net/static/pup/emoji/couch_and_lamp20220119222025.png" class="Oj28t"
+                          alt="" width="22" height="22"><span class="nWiXa">"인테리어가 멋져요"</span><span class="TwM9q"><span
+                            class="place_blind">이 키워드를 선택한 인원</span>273</span></div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 20.9927%;"></div>
+                      <div class="CsBE9"><img
+                          src="https://ssl.pstatic.net/static/pup/emoji/framed_picture20220119222027.png" class="Oj28t"
+                          alt="" width="22" height="22"><span class="nWiXa">"뷰가 좋아요"</span><span class="TwM9q"><span
+                            class="place_blind">이 키워드를 선택한 인원</span>258</span></div>
+                    </li>
+                  </ul></a>
+                </div>
+                <div class="TraH1">
+                  <ul class="Uf1BQ">
+                    <li class="qrzj_">
+                      <div class="IEbo1">
+                        <div class="GP2eR">
+                          <div class="RGkHL">
+                            <span class="zPfVt">🍽 B 세트 (2인) • 모듬 카츠 + 후토마끼 반줄 + 전복리조또 + 탄산 주말 오픈런으로 가서 웨이팅 없이 먹을 수 있었어요
+                              ! 오픈 시간도 전에 사...</span><span class="rvCSr"><span class="place_blind">내용
+                                더보기</span></span></a>
+                          </div>
+                          <div class="ozEbl">
+                            <div class="place_thumb"><img
+                                src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f48_48&amp;src=https%3A%2F%2Fphinf.pstatic.net%2Fcontact%2F20220729_42%2F1659070387726RHXT6_JPEG%2FprofileImage.jpg"
+                                class="YMYlP" alt="프로필" width="28" height="28"></div></a>
+                            <div class="rg88i">min****</div>
+                            <div class="FrWK3"><span class="ExHfk"><span class="place_blind">최근 방문일</span><time
+                                  aria-hidden="true">11.12.토</time><span class="place_blind">2022년 11월 12일
+                                  토요일</span></span><span class="ExHfk">1번째 방문</span><span class="ExHfk">영수증</span></div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="x0W33">
+                          <img
+                            src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f87_87&amp;src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjExMTdfMjQy%2FMDAxNjY4NjY1NTE3NjUz.QmZK-OM5ED914p8cxbn-WSFJZObbU-h2ZW2L0-vfIzkg.gBQ8XUPw98kkHR6VfCH68EHgsxKLmPSZtaJVD0EaIeEg.JPEG%2F20221112_112349.jpg"
+                            class="_img" alt="방문자리뷰"><span class="place_thumb_count"><span
+                              class="place_blind"></span></span></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="qrzj_">
+                      <div class="IEbo1">
+                        <div class="GP2eR">
+                          <div class="RGkHL">
+                            <span class="zPfVt">오랜만에 가본 고양연화! 역시 항상, 맛있는거 같
+                              아용ㅎㅎ 이번에 후토마끼도 시켰ㄴ뎅 너무 맛있
+                              더라구요ㅎㅎ 그리고 돈카츠도 맛있었엉용...</span><span class="rvCSr"></span></a>
+                          </div>
+                          <div class="ozEbl">
+                            <div class="place_thumb"><img
+                                src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f48_48&amp;src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220611_68%2F1654874860645nirtr_JPEG%2F1618149340497-14.jpg"
+                                class="YMYlP" alt="프로필" width="28" height="28"></div></a>
+                            <div class="rg88i">깜두리718</div>
+                            <div class="FrWK3"><span class="ExHfk"><span class="place_blind">최근 방문일</span><time
+                                  aria-hidden="true">11.5.토</time><span class="place_blind">2022년 11월 5일
+                                  토요일</span></span><span class="ExHfk">1번째 방문</span><span class="ExHfk">영수증</span></div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="x0W33">
+                          <img
+                            src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f87_87&amp;src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjExMDZfOTcg%2FMDAxNjY3NzAwMDAzMDE5.5xfW8aaZAZ2CBv7Emi5W6eXSyUTCB49NxVgUI_Y5X8Ug.DPpe7qDV_qjW5ENJ3W9VTPpgtu9u_2hcwRuzdnAFXjMg.JPEG%2F20221105_193428.jpg"
+                            class="_img" alt="방문자리뷰"><span class="place_thumb_count"><span
+                              class="place_blind"></span></span></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="qrzj_">
+                      <div class="IEbo1">
+                        <div class="GP2eR">
+                          <div class="RGkHL">
+                            <span class="zPfVt">웨이팅할만한 가치가있는 맛집이었다! 웨이팅 싫
+                              어하지만 기장 간 김에 어쩔 수 없이 기다렸는데
+                              진짜 웨이팅 잘한맛이었다. 안심카츠 입에...</span><span class="rvCSr"><span class="place_blind">내용
+                                더보기</span></span></a>
+                          </div>
+                          <div class="ozEbl">
+                            <div class="place_thumb"><img
+                                src="https://pcmap.place.naver.com/assets/shared/images/icon_default_profile.png"
+                                class="YMYlP" alt="프로필" width="28" height="28"></div></a>
+                            <div class="rg88i">윤디5837</div>
+                            <div class="FrWK3"><span class="ExHfk"><span class="place_blind">최근 방문일</span><time
+                                  aria-hidden="true">10.30.일</time><span class="place_blind">2022년 10월 30일
+                                  일요일</span></span><span class="ExHfk">1번째 방문</span><span class="ExHfk">영수증</span></div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="x0W33">
+                          <img
+                            src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f87_87&amp;src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjEwMzBfMjAw%2FMDAxNjY3MTA5ODcwMjc2.HDm-0oABJtS5H0P0ZSdKnuVjh9cEW1TRj9tMnOIOMNwg.oGgSiE1X5kXJbYtygceTBRxXXMUi3RcqFphOyWvkG1sg.JPEG%2F20221030_141053.jpg"
+                            class="_img" alt="방문자리뷰"><span class="place_thumb_count"><span
+                              class="place_blind"></span></span></a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="lfH3O">
+                  <span class="iNSaH">방문자 리뷰</span>더보기</a>
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,361 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>해운대암소갈비집</title>
+  <link rel="stylesheet" href="../식당/css/all.min.css">
+  <link rel="stylesheet" href="../식당/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../식당/css/templatemo-style.css">
+
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=dgqid4621f"></script>
+
+  <style>
+    @font-face {
+      font-family: 'Humanbumsuk';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      background-color: #fbf9ed;
+      font-family: 'Humanbumsuk';
+    }
+
+    footer {
+      background-color: white;
+    }
+
+    footer>.inner {
+      margin: 60px auto;
+    }
+
+    footer p {
+      font-size: 15px;
+      color: #555;
+      margin: 0 30px 12px 0;
+    }
+
+    footer ul {
+      display: flex;
+    }
+
+
+    pNnVF {
+      width: 54px
+    }
+
+    ;
+  </style>
+
+
+</head>
+
+<body class="loaded">
+
+  <div id="wrap">
+
+    <header>
+      <div id="in_header" style="background-color: white;">
+        <a href="../index.html">
+          <img class="logo" src="../웹개발/로고.png" style="display: block; margin: 0 auto;"
+            width="100px" height="90px">
+        </a>
+
+    </header>
+  </div>
+
+  <div class="container-fluid tm-container-content tm-mt-60">
+    <div class="row mb-4">
+      <h2 class="col-12 tm-text-primary">해운대암소갈비집</h2>
+    </div>
+    <div class="row tm-mb-90">
+      <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
+        <img src="../식당/img/amso/암소 1.jpg" width="350px" height="350px">
+        <img src="../식당/img/amso/암소 2.jpg" width="350px" height="350px">
+        <img src="../식당/img/amso/암소 3.jpg" width=350px height="350px">
+        <img src="../식당/img/amso/암소 4.jpg" width=350px height="350px">
+        <img src="../식당/img/amso/암소 5.jpg" width=350px height="350px">
+        <img src="../식당/img/amso/암소 6.jpg" width=350px height="350px">
+        <img src="../식당/img/amso/암소 7.jpg" width=350px height="350px">
+        <img src="../식당/img/amso/암소 8.jpg" width=350px height="350px">
+        <img src="../식당/img/amso/암소 9.jpg" width=350px height="350px">
+
+      </div>
+      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+        <div id="map" style="width:100%;height:400px;"></div>
+
+        <script>
+          var HOME_PATH = window.HOME_PATH || '.';
+
+          var cityhall = new naver.maps.LatLng(35.1632332, 129.1662783),
+            map = new naver.maps.Map('map', {
+              center: cityhall.destinationPoint(10, 10),
+              zoom: 17
+            }),
+            marker = new naver.maps.Marker({
+              map: map,
+              position: cityhall
+            });
+
+          var contentString = [
+            '<div class="iw_inner">',
+            '   <h3>해운대암소갈비집</h3>',
+            '   <p>	부산광역시 해운대구 중동2로10번길 32-10',
+            '   </p>',
+            '</div>'
+          ].join('');
+
+          var infowindow = new naver.maps.InfoWindow({
+            content: contentString
+          });
+
+          naver.maps.Event.addListener(marker, "click", function (e) {
+            if (infowindow.getMap()) {
+              infowindow.close();
+            } else {
+              infowindow.open(map, marker);
+            }
+          });
+
+          infowindow.open(map, marker);
+        </script>
+        <div class="tm-bg-gray tm-video-details">
+          <section class="restaurant-detail">
+            <header>
+              <div class="restaurant_title_wrap">
+                <span class="title">
+
+                  <p class="branch"></p>
+                </span>
+
+              </div>
+
+            </header>
+
+
+            <table class="info" border="1">
+
+
+              <tbody>
+                <tr class="only-desktop">
+                  <th>주소</th>
+                  <td>부산광역시 해운대구 중동2로10번길 32-10<br>
+                    <span class="Restaurant__InfoAddress--Rectangle">지번</span>
+                    <span class="Restaurant__InfoAddress--Text">부산시 해운대구 중동 1225-1</span>
+                  </td>
+                </tr>
+
+                <tr class="only-desktop">
+                  <th>전화번호</th>
+                  <td>051-746-0033</td>
+                </tr>
+
+                <tr>
+                  <th>음식 종류</th>
+                  <td>
+                    <span>고기 요리</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th>가격대</th>
+                  <td>3만원-4만원</td>
+                </tr>
+
+                <tr>
+                  <th>주차</th>
+                  <td>무료주차 가능 </td>
+                </tr>
+
+                <tr>
+                  <th style="vertical-align:top;">영업시간</th>
+                  <td>11:30 - 22:00</td>
+                </tr>
+
+                <tr>
+                  <th style="vertical-align:top;">쉬는시간</th>
+                  <td>15:15 - 16:30</td>
+                </tr>
+
+                <tr>
+                  <th>마지막주문</th>
+                  <td>20:50</td>
+                </tr>
+
+
+                <tr>
+                  <th>웹 사이트</th>
+                  <td>
+                    <a href="http://www.해운대암소갈비.com/" class="under_line" target="_blank"
+                      style="color: rgb(7, 138, 245);" onclick="trackEvent('CLICK_RESTO_WEBSITE')">
+                      식당 홈페이지로 가기
+                    </a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th>메뉴</th>
+                  <td class="menu_td">
+                    <ul class="Restaurant_MenuList">
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">생갈비 (180g)</span>
+                        <span class="Restaurant_MenuPrice">48,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">양념갈비 (180g)</span>
+                        <span class="Restaurant_MenuPrice">42,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">불고기 (170g)</span>
+                        <span class="Restaurant_MenuPrice">35,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">뚝배기된장</span>
+                        <span class="Restaurant_MenuPrice">3,000원</span>
+                      </li>
+                      <li class="Restaurant_MenuItem">
+                        <span class="Restaurant_Menu">감자사리</span>
+                        <span class="Restaurant_MenuPrice">2,000원</span>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+
+
+
+          </section>
+          <div>
+            <br />
+            <br />
+            <div class="place_section" data-nclicks-area-code="rrr">
+              <h2 class="place_section_header no_line">방문자 리뷰<em class="place_section_count">5,447</em></h2>
+              <div class="place_section_content">
+                <div class="iqjjt">
+                  <ul class="uNsI9">
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 78.0875%;"></div>
+                      <div class="CsBE9"><img
+                          src="https://ssl.pstatic.net/static/pup/emoji/face_savoring_food20220119222022.png"
+                          class="Oj28t" alt="" width="22" height="22"><span class="nWiXa">"음식이 맛있어요"</span><span
+                          class="TwM9q"><span class="place_blind">이 키워드를 선택한 인원</span>2213</span></div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 18.8073%;"></div>
+                      <div class="CsBE9"><img
+                          src="https://ssl.pstatic.net/static/pup/emoji/beating_heart20220119222223.png" class="Oj28t"
+                          alt="" width="22" height="22"><span class="nWiXa">"친절해요"</span><span class="TwM9q"><span
+                            class="place_blind">이 키워드를 선택한 인원</span>533</span></div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 18.7015%;"></div>
+                      <div class="CsBE9"><img src="https://ssl.pstatic.net/static/pup/emoji/cook20220119222024.png"
+                          class="Oj28t" alt="" width="22" height="22"><span class="nWiXa">"특별한 메뉴가 있어요"</span><span
+                          class="TwM9q"><span class="place_blind">이 키워드를 선택한 인원</span>530</span></div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 16.9725%;"></div>
+                      <div class="CsBE9"><img src="https://ssl.pstatic.net/static/pup/emoji/leaf20220119222023.png"
+                          class="Oj28t" alt="" width="22" height="22"><span class="nWiXa">"재료가 신선해요"</span><span
+                          class="TwM9q"><span class="place_blind">이 키워드를 선택한 인원</span>481</span></div>
+                    </li>
+                    <li class="nbD78">
+                      <div class="GFp6T" style="width: 15.9139%;"></div>
+                      <div class="CsBE9"><img src="https://ssl.pstatic.net/static/pup/emoji/park_sign20220119222222.png"
+                          class="Oj28t" alt="" width="22" height="22"><span class="nWiXa">"주차하기 편해요"</span><span
+                          class="TwM9q"><span class="place_blind">이 키워드를 선택한 인원</span>451</span></div>
+                    </li>
+                  </ul></a>
+                </div>
+                <div class="TraH1">
+                  <ul class="Uf1BQ">
+                    <li class="qrzj_">
+                      <div class="IEbo1">
+                        <div class="GP2eR">
+                          <div class="RGkHL"><span class="zPfVt">대기가 그렇게 긴데는 이유가.. 넘 맛있네요. 소갈
+                              비가 다 맛있지 했는데. 정말 맛있어요. 평일저녁
+                              시. 테이블링 걸고 가니 바로 들어갔어요. 여...</span><span class="rvCSr"></span></a></div>
+                          <div class="ozEbl">
+                            <div class="place_thumb"><img
+                                src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f48_48&amp;src=https%3A%2F%2Fphinf.pstatic.net%2Fcontact%2F20220211_285%2F1644552682201bxTYT_JPEG%2FDSC07599.JPG"
+                                class="YMYlP" alt="프로필" width="28" height="28"></div></a>
+                            <div class="rg88i">지혜림7676</div>
+                            <div class="FrWK3"><span class="ExHfk"><span class="place_blind">최근 방문일</span><time
+                                  aria-hidden="true">11.30.수</time><span class="place_blind">2022년 11월 30일
+                                  수요일</span></span><span class="ExHfk">1번째 방문</span><span class="ExHfk">영수증</span></div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="x0W33"><img
+                            src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f87_87&amp;src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjEyMDFfNTQg%2FMDAxNjY5ODYwMjYxMzA0.hAUg2VK_8l_T48-yWExlE1B6eVrqKM_c19sO8Gb5Wmsg.97pib-Ui1fGL818w0xNgvg5s4gEza2iPW013QNHfmFcg.JPEG%2F1669808560043-2.jpg"
+                            class="_img" alt="방문자리뷰"><span class="place_thumb_count"></span></a></div>
+                      </div>
+                    </li>
+                    <li class="qrzj_">
+                      <div class="IEbo1">
+                        <div class="GP2eR">
+                          <div class="RGkHL"><span class="zPfVt">해운대 암소갈비집 !!! 생갈비는 무조건 미리 예약
+                              해야 먹을수 있어요. 양념갈비도 맛있어요. 부들부
+                              들하고 양념이 잘되있어요. 방마다 이모님...</span><span class="rvCSr"></span></a></div>
+                          <div class="ozEbl">
+                            <div class="place_thumb"><img
+                                src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f48_48&amp;src=https%3A%2F%2Fphinf.pstatic.net%2Fcontact%2F20210429_22%2F1619657334629TOx7S_JPEG%2Fimage.jpg"
+                                class="YMYlP" alt="프로필" width="28" height="28"></div></a>
+                            <div class="rg88i">효갱이</div>
+                            <div class="FrWK3"><span class="ExHfk"><span class="place_blind">최근 방문일</span><time
+                                  aria-hidden="true">11.19.토</time><span class="place_blind">2022년 11월 19일
+                                  토요일</span></span><span class="ExHfk">1번째 방문</span><span class="ExHfk">영수증</span></div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="x0W33"><img
+                            src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f87_87&amp;src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjExMjNfNiAg%2FMDAxNjY5MjA5ODMzMjM4.cbJd078He_MXzmPTBWc0SNIWjDEwZlal87gBN9fcCN0g.ZhLJcq0C1LMB5MS7cEBIGc6bBNM5MepXGIt50h9c9UUg.JPEG%2F352DE51A-F6E7-466A-9915-C5021C9F24AE.jpeg"
+                            class="_img" alt="방문자리뷰"><span class="place_thumb_count"></span></a></div>
+                      </div>
+                    </li>
+                    <li class="qrzj_">
+                      <div class="IEbo1">
+                        <div class="GP2eR">
+                          <div class="RGkHL"><span class="zPfVt">일욜 아침 9시 전에 갔는데 테이블링 예약 가능하
+                              길래 등록하고 대기1번ㅋ 11시 20분에 입장했어요
+                              ~ 어른3명이 생갈비3, 양념1 시키고 찌개시...</span><span class="rvCSr"></span></a></div>
+                          <div class="ozEbl">
+                            <div class="place_thumb"><img
+                                src="https://pcmap.place.naver.com/assets/shared/images/icon_default_profile.png"
+                                class="YMYlP" alt="프로필" width="28" height="28"></div></a>
+                            <div class="rg88i">징징밍밍</div>
+                            <div class="FrWK3"><span class="ExHfk"><span class="place_blind">최근 방문일</span><time
+                                  aria-hidden="true">10.31.월</time><span class="place_blind">2022년 10월 31일
+                                  월요일</span></span><span class="ExHfk">1번째 방문</span><span class="ExHfk">영수증</span></div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="x0W33"><img
+                            src="https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f87_87&amp;src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjEwMzFfMjE0%2FMDAxNjY3MTg4MDcxOTQ4.zB9DnrzSj0JB77BvqWmoExB2Je-FV0IM4vJLswbSTqMg.LjHhI7tgqcpk7YixwrxIxIqa-yO3c5DlRUQys-sO5uMg.JPEG%2F20221031_113224.jpg"
+                            class="_img" alt="방문자리뷰"><span class="place_thumb_count"></span></a></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="lfH3O"><span class="iNSaH">방문자 리뷰</span>더보기</a></div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

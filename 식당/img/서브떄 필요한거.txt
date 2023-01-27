@@ -1,0 +1,12 @@
+google map api
+
+AIzaSyAPzNhjiId7-rMNmQ74SnOdfOKl3Az8b2g
+
+https://naver.me/xJNaJRe4
+
+작업할떄 필요한 사이트
+http://1.253.254.68/deu20141434/	웹
+https://translate.google.com/?hl=ko&sl=ko&tl=en&text=%EC%96%BC%ED%81%B0&op=translat	번역기
+사진찾기
+http://www.moamodu.com/develop/naver_map.php	위도경도
+https://navermaps.github.io/maps.js.ncp/docs/tutorial-1-infowindow-simple.example.html	지도가이드
